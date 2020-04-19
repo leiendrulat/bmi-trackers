@@ -1,1 +1,1 @@
-bmi-trackers
+BMI Tracker

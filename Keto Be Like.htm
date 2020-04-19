@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diet Be Like</title>
+  <link rel="stylesheet" href="Responsive Topnav with Dropdown.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Palanquin Dark' rel='stylesheet'>
+</head>
+
+<body style="background-image: url(EH.jpg); background-repeat: no-repeat;
+  background-size: cover;">
+  <div class="topnav" id="myTopnav">
+    <a href="#home" class="active">Home</a>
+    <a href="#news">News</a>
+    <a href="Contact.html">Contact</a>
+    <div class="dropdown">
+      <button class="dropbtn">Our Approach
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="Diet.htm">Personal Planner</a>
+        <a href="#">Meet a Coach</a>
+        <a href="#">Membership</a>
+      </div>
+    </div>
+    <a href="#about">About</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+  </div>
+
+  <div class="container">
+    <h2>Personal Profile</h2>
+
+    <form>
+
+      <label for="username">UserName</label>
+      <input type="text" id="uname" placeholder="Username" required>
+
+      <label for="email">Email Address</label>
+      <input type="text" placeholder="Email*" required>
+
+      <label for="Weight">Weight</label>
+      <input type="number" id="lbs" placeholder="in lbs" required>
+      <div class="space">&nbsp;</div>
+      <label for="Height">Height</label>
+      <input type="number" id="inches" placeholder="inches">
+      <div class="space">&nbsp;</div>
+      <input type="submit" value="Submit" onclick="bmi()">
+
+    </form>
+  </div>
+
+
+  <div class="space">&nbsp;</div>
+  <div class="center">
+    <h2>"Don't Tell People your Plans, Show them You Results"</h2>
+
+  </div>
+
+  <div class="space">&nbsp;</div>
+  <div class="flex">
+    <div class="text">Easy to Follow Diet Plans</div>
+    <div class="space">&nbsp;</div>
+    <div class="mid con">
+      <h3>Mediteranean Diet</h3>
+      <a href="Diet.htm"><img src="MD.jpg" class="responsive" width="200"></a>
+
+    </div>
+    <div class="mid2 con">
+      <h3>Keto</h3>
+      <a href="Diet.htm"><img src="KD.jpg" class="responsive" width="200"></a>
+    </div>
+    <div class="mid3 con">
+      <h3>Vegan</h3>
+      <a href="Diet.htm"><img src="VG.jpg" class="responsive" width="200"></a>
+    </div>
+    <div class="right con">
+      <h3>Healthy Living</h3>
+      <a href="Diet.htm"><img src="ht.jpg" class="responsive" width="200"></a>
+    </div>
+  </div>
+  <br>
+  <div class="space">&nbsp;</div>
+  <br>
+  <div class="flex1">
+    <div class="left">Exercise Videos</div>
+    <div class="space">&nbsp;</div>
+    <div class="median cons2">
+      <iframe width="335" height="250" src="https://www.youtube.com/embed/-jRoXcmjVUs" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="right2 cons2">
+      <iframe width="335" height="250" src="https://www.youtube.com/embed/sTANio_2E0Q" frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+  <div class="left">
+    <h6>&copy LEndrulat</h6>
+
+  </div>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    function bmi() {
+      var lbs = document.getElementById("lbs").value;
+      var inches = document.getElementById("inches").value;
+      var bmi;
+      //[150 ÷ (65)2] x 703 = 24.96
+
+      var newinch = Number(inches);
+      bmi = Number(lbs) / (newinch * newinch);
+      var newbmi = bmi * 703;
+      bmi = bmi.toFixed(1);
+      console.log(bmi);
+      if (newbmi < 18.5) {
+        alert("underweight");
+      }
+
+      else if (newbmi > 18.5 && newbmi < 24.9) {
+        alert("overweight");
+      }
+      else if (newbmi > 18.5 && newbmi < 24.9) {
+        alert("normal");
+      }
+      else if (newbmi > 30) {
+        alert("Obesity");
+
+
+      } else {
+
+      }
+
+    }
+
+  </script>
+</body>
+
+</html>
